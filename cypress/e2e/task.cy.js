@@ -68,7 +68,7 @@ describe("Exam", () => {
     //cy.go('back');
     //cy.reload();
     cy.wait(5000);
-    cy.get('#logout_sidebar_link').click();
+    cy.get('#logout_sidebar_link').click({force:true});
   });
 
   it("Task 2 Subsection 2 & 3", () => {
