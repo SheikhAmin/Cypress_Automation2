@@ -60,17 +60,18 @@ describe("Exam", () => {
     cy.go("back");
     cy.reload();
     // This below portion is for the user "performance_glitch_user"
-    /*
+    
     cy.get('[data-test="username"]').type("performance_glitch_user");
     cy.get('[data-test="password"]').type("secret_sauce");
     cy.get("#login-button").click();
     cy.wait(5000);
-    cy.go('back');
-    cy.reload();
-    */
+    //cy.go('back');
+    //cy.reload();
+    cy.wait(5000);
+    cy.get('#logout_sidebar_link').click();
   });
 
-  it.only("Task 2 Subsection 2 & 3", () => {
+  it("Task 2 Subsection 2 & 3", () => {
     const obj = new login();
     obj.setUser("standard_user");
     obj.setPassword("secret_sauce");
